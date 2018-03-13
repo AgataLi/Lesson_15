@@ -1,0 +1,130 @@
+body {
+  font-size: 14px;
+}
+
+/*text - ellipsis https://codepen.io/natonischuk/ */
+.snippet__thumbnail > img {
+  max-width: 100%;
+}
+/* styles for '...' */ 
+.snippet__description, .hero__description {
+  /* hide text if it more than N lines  */
+  overflow: hidden;
+  /* for set '...' in absolute position */
+  position: relative; 
+  /* use this value to count block height */
+  line-height: 1em;
+  /* max-height = line-height (1.2) * lines max number (3) */
+  max-height: 3em; 
+  /* fix problem when last visible word doesn't adjoin right side  */
+  text-align: justify;
+  margin-top: 0.2em;
+
+  margin-right: -1em;
+  padding-right: 1em;
+}
+.snippet__description:before {
+  /* points in the end */
+  content: '...';
+  /* absolute position */
+  position: absolute;
+  /* set position to right bottom corner of block */
+  right: 0;
+  bottom: 0;
+}
+.snippet__description:after {
+  /* points in the end */
+  content: '';
+  /* absolute position */
+  position: absolute;
+  /* set position to right bottom corner of text */
+  right: 0;
+  width: 1em;
+  /* set width and height */
+  height: 1em;
+}
+
+
+@media screen and (max-width: 359px) {
+   .header__logo {
+  display: none;
+  }
+  .header__title {
+    font-size: 1.8em;
+   }
+ 
+  .nav__item {
+    text-align: left;
+    font-size: 1.3em;
+    line-height: 26px;
+  }
+  
+  .header__menu svg {
+    width: 36px;
+    fill: #E0E0E0;
+  }
+
+  
+.scores__table {
+  font-size: 0.8em;
+}
+
+.snippet__thumbnail {
+  display: none;
+ }
+
+.snippet__title {
+  font-weight: 500;
+  color: #000;
+}
+
+.snippet__description { 
+  margin-top: 5px;
+ }
+
+footer {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 0;
+}
+
+.footer__logo {
+  height: 48px;
+  margin-right: 5px;
+}
+
+footer li {
+  line-height: 24px;
+  text-transform: uppercase;
+  text-align: center;
+  max-width: 100%;
+  margin: 0;
+}
+}
+
+@media screen and (min-width: 340px) {
+
+.footer__logo {
+  display: none;
+}
+}
+
+
+@media screen and (max-width: 479px) {
+.scores__location {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .weather {
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .hero__description {
+    margin-top: 10px;
+  }
+  }
+}
